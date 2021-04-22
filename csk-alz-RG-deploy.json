@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "CSK-RG-Net-Name": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of Network Resource Group"
+            }
+        },
+        "CSK-RG-Mgmt-Name": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of Mgmt Resource Group"
+            }
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "[parameters('CSK-RG-Net-Name')]",
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2019-10-01",
+            "location": "eastus2",
+            "dependsOn": [
+            ],
+            "tags": {
+            }
+        },
+        {
+            "name": "[parameters('CSK-RG-Mgmt-Name')]",
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2019-10-01",
+            "location": "eastus2",
+            "dependsOn": [
+            ],
+            "tags": {
+            }
+        }
+    ],
+    "outputs": {}
+}

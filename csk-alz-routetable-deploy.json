@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "routeTableName": {
+            "type": "string",
+            "metadata": {
+                "description": "Route Table Name"
+            }
+        },
+        "Route1Name": {
+            "type": "string",
+            "metadata": {
+                "description": "Route 1 Name"
+            }
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "[parameters('routeTableName')]",
+            "type": "Microsoft.Network/routeTables",
+            "apiVersion": "2019-11-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+            },
+            "properties": {
+                "routes": [
+                    {
+                        "name": "[parameters('Route1Name')]",
+                        "properties": {
+                            "addressPrefix": "destinationCIDR",
+                            "nextHopType": "VirtualNetworkGateway",
+                            "nextHopIpAddress": "0.0.0.0"
+                        }
+                    }
+                ],
+                "disableBgpRoutePropagation": true
+            }
+        }
+    ],
+    "outputs": {}
+}

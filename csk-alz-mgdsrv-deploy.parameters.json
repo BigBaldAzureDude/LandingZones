@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "AzAutoName": {
+            "value": "csk-hub-p-eus2-mgt-hubaa-aa"
+        },
+        "RSVName": {
+            "value": "csk-hub-p-eus2-mgt-hubvault-vault"
+        },
+        "LogAWName": {
+            "value": "csk-hub-p-eus2-mgt-hubloga-loga"
+        },
+        "keyvaultName": {
+            "value": "csk-hub-p-eus2-mgt-hub-kv"
+        }
+    }
+}

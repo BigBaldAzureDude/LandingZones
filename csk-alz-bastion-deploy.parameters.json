@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vnet-name": {
+            "value": "csk-hub-p-eus2-net-vnet"
+        },
+        "vnet-ip-prefix": {
+            "value": "192.168.240.0/20"
+        },
+        "vnet-new-or-existing": {
+            "value": "existing"
+        },
+        "bastion-subnet-ip-prefix": {
+            "value": "192.168.240.64/26"
+        },
+        "bastion-host-name": {
+            "value": "csk-hub-p-eus2-mgt-hubbast-bast"
+        },
+        "location": {
+            "value": "eastus2"
+        }
+    }
+}
